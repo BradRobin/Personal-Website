@@ -1,0 +1,167 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #000; /* Fully black background */
+    color: #fff;
+}
+
+/* Header */
+header {
+    background: #222;
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Main Content */
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+/* About Section */
+.about-section {
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.about-section img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+    filter: drop-shadow(0px 0px 20px black);
+    margin-bottom: 20px;
+}
+
+/* Achievements */
+.achievements {
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: left;
+}
+
+.achievements h2 {
+    text-align: center;
+}
+
+.achievements ul {
+    list-style: none;
+    padding: 0;
+}
+
+.achievements ul li {
+    margin: 10px 0;
+}
+
+.achievements ul li a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.achievements ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Photo Gallery */
+.photo-gallery {
+    background-color: black;
+    padding: 30px 0;
+    text-align: center;
+}
+
+.photo-gallery h2 {
+    color: white;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+/* Scrollable Image Container */
+.image-scroll-container {
+    overflow-x: hidden; /* Hide scrollbar but keep scrolling */
+    white-space: nowrap;
+    padding: 10px 0;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+/* Image Scroll */
+.image-scroll {
+    display: flex;
+    gap: 15px;
+    padding: 10px;
+    scroll-behavior: smooth;
+}
+
+/* Image Styling */
+.image-scroll img {
+    height: 200px;
+    width: auto;
+    border-radius: 10px;
+    box-shadow: inset 0px 0px 60px rgba(0, 0, 0, 1), /* Inner shadow for blending */
+                0px 0px 20px 10px rgba(0, 0, 0, 0.8); /* Outer shadow to hide edges */
+    transition: transform 0.3s ease-in-out;
+    filter: brightness(80%); /* Dim edges for smooth blending */
+}
+
+/* Hover Effect */
+.image-scroll img:hover {
+    transform: scale(1.05);
+    filter: brightness(100%);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #222;
+    color: white;
+}
+
+footer a {
+    color: #f4f4f4;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Fix for scroll not working on mobile */
+.image-scroll-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.image-scroll-container::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+}
