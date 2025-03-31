@@ -105,7 +105,7 @@ main {
 
 /* Scrollable Image Container */
 .image-scroll-container {
-    overflow-x: hidden; /* Hide scrollbar but keep scrolling */
+    overflow-x: auto;
     white-space: nowrap;
     padding: 10px 0;
     position: relative;
