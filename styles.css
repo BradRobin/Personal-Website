@@ -8,13 +8,153 @@
 /* Body Styling */
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #000; /* Fully black background */
+    background-color: #e5e3ef; /* Fully black background */
+    color: #000000;
+}
+
+.circle {
+    position: fixed;
+    top: -50vmin;
+    left: -50vmin;
+    width: 100vmin;
+    height: 100vmin;
+    border-radius: 47% 53% 61% 39% / 45% 51% 49% 55%;
+    background: #65c8ff;
+}
+
+.circle::after {
+    content: "";
+    position: inherit;
+    right: -50vmin;
+    bottom: -50vmin;
+    width: inherit;
+    height: inherit;
+    border-radius: inherit;
+    background: #143d81;
+}
+
+.card {
+    overflow: hidden;
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    margin: 0 20px;
+    padding: 160px 30px 38px;
+    border-radius: 1.25rem;
+    background: #fff;
+    text-align: center;
+    box-shadow: 0 100px 100px rgb(0, 0, 0 / 10%);
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    background: #216ce7;
+    top: -880px;
+    left: -50%;
+    width: 1000px;
+    height: 1000px;
+    border-radius: 50%;
+    
+}
+
+.card>h2 {
+    font-size: 22px;
+    font-weight: 500;
+    margin: 0 0 30px;
+    color: #2a3444;
+}
+
+.form {
+    margin: 0 0 30px;
+    display: grid;
+    gap: 10px;
+}
+
+.form>input, .form>button {
+    width: 100%;
+    height: 50px;
+    border-radius: 28px;
+}
+
+.form>input {
+    border: 2px solid #e0e0e0;
+    font-family: inherit;
+    font-size: 16px;
+    padding: 0 24px;
+    color: #11274c;
+    transition: all 0.375s;
+}
+
+.form>input:hover {
+    border: 2px solid #000;
+}
+
+.form>input::placeholder {
+    color: #cac8c8;
+}
+
+.form>button {
+    cursor: pointer;
+    width: 100%;
+    padding: 0 16px;
+    background: 216ce7;
+    color: #f9f9f9;
+    border: 0;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 2px;
+    transition: all 0.375s;
+}
+
+.form>button:hover {
     color: #fff;
+    background: #143d81;
+}
+
+@media (width >= 500px) {
+    body{
+        padding: 0;
+    }
+    .card {
+        margin: 0;
+        width: 360px;
+    }
+}
+.custom-shape-divider-bottom-1743567711 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1743567711 svg {
+    position: relative;
+    display: block;
+    width: calc(101% + 1.3px);
+    height: 119px;
+}
+
+.custom-shape-divider-bottom-1743567711 .shape-fill {
+    fill: #ff0000;
+}
+
+/** For mobile devices **/
+@media (max-width: 767px) {
+    .custom-shape-divider-bottom-1743567711 svg {
+        width: calc(207% + 1.3px);
+        height: 122px;
+    }
 }
 
 /* Header */
 header {
-    background: #222;
+    background: #ffffff;
     padding: 20px;
     text-align: center;
 }
@@ -30,7 +170,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: white;
+    color: rgb(0, 0, 0);
     text-decoration: none;
     font-weight: bold;
 }
@@ -142,12 +282,12 @@ main {
 footer {
     text-align: center;
     padding: 20px;
-    background: #222;
-    color: white;
+    background: #ffffff;
+    color: rgb(0, 0, 0);
 }
 
 footer a {
-    color: #f4f4f4;
+    color: #000000;
     text-decoration: none;
     font-weight: bold;
 }
